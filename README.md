@@ -46,6 +46,13 @@ https://learn.adafruit.com/adafruit-vl53l0x-micro-lidar-distance-sensor-breakout
 https://learn.adafruit.com/adafruit-4-channel-adc-breakouts/python-circuitpython  
 `sudo pip3 install adafruit-circuitpython-ads1x15`  
 
+install pure data and extensions for osc comms
+```
+sudo apt install puredata
+sudo apt install pd-mrpeach
+sudo apt install pd-mrpeach-net
+```
+
 install systemd service  
 ```
 sudo cp vaso.service /etc/systemd/system/
