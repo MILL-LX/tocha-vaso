@@ -1,0 +1,40 @@
+#N canvas 575 54 871 552 12;
+#X obj 205 335 udpreceive 9001;
+#X obj 205 369 unpackOSC;
+#X obj 205 412 routeOSC /vaso;
+#X obj 347 403 print;
+#X obj 519 378 osc~ 220;
+#X obj 417 411 *~;
+#X obj 417 458 dac~;
+#X obj 598 409 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 0;
+#X obj 551 194 adc~;
+#X obj 550 222 *~;
+#X obj 575 333 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 2600 0;
+#X obj 579 222 pow 2;
+#X obj 623 222 r input1;
+#X msg 48 67 \; pd dsp \$1;
+#X obj 48 31 tgl 30 0 empty empty DSP 1 -8 0 10 -262144 -1 -1 0 1;
+#X obj 48 206 vsl 30 120 0 1 0 0 input1 empty CHANNEL_1 0 -9 0 12 -262144
+-1 -1 0 0;
+#X obj 86 206 vu 30 120 vu_1 empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 550 248 env~;
+#X obj 585 248 - 95;
+#X obj 445 297 dac~;
+#X obj 623 248 s vu_1;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 1 0 2 0;
+#X connect 4 0 5 0;
+#X connect 5 0 6 0;
+#X connect 5 0 6 1;
+#X connect 7 0 5 1;
+#X connect 8 0 9 0;
+#X connect 9 0 17 0;
+#X connect 9 0 19 0;
+#X connect 11 0 9 1;
+#X connect 12 0 11 1;
+#X connect 14 0 13 0;
+#X connect 17 0 18 0;
+#X connect 18 0 20 0;

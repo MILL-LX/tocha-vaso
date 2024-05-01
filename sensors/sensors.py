@@ -6,8 +6,11 @@ import adafruit_vl53l0x
 import adafruit_ads1x15.ads1015 as ADS
 from adafruit_ads1x15.analog_in import AnalogIn
 
+osc_host = "127.0.0.1"
+osc_port = 9000
+
 # Initialize OSC client
-client = udp_client.SimpleUDPClient("127.0.0.1", 9000)
+client = udp_client.SimpleUDPClient(osc_host, osc_port)
 
 # Create the I2C bus
 i2c = busio.I2C(board.SCL, board.SDA)
@@ -20,10 +23,10 @@ ads = ADS.ADS1015(i2c)
 # Create single-ended input on channel 0
 chan = AnalogIn(ads, ADS.P0)
 
+print("sending sensor data to", osc_host, ':', osc_port)
+
 while True:
-    ldr_val = chan.value
-    tof_val = vl53.range
-    print("{:>5}\t{:>5.3f}".format(chan.value, chan.voltage),"{0}".format(vl53.range))
-    client.send_message("/ldr", ldr_val)
-    client.send_message("/tof", tof_val)
+    # print("{:>5}\t{:>5.3f}".format(chan.value, chan.voltage),"{0}".format(vl53.range))
+    client.send_message("/ldr", chan.value)
+    client.send_message("/tof", vl53.range)
     time.sleep(0.1)
