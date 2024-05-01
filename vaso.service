@@ -1,0 +1,11 @@
+[Unit]
+Description=vaso
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/vaso/
+ExecStart=/bin/bash /home/pi/vaso/vaso_start.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
