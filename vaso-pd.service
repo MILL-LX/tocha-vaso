@@ -1,10 +1,11 @@
 [Unit]
-Description=vaso
+Description=vaso-pd
+Requires=vaso-sensores.service
 
 [Service]
 User=pi
-WorkingDirectory=/home/pi/vaso/
-ExecStart=/bin/bash /home/pi/vaso/vaso_start.sh
+WorkingDirectory=/home/pi/tocha-vaso/
+ExecStart=/bin/bash /home/pi/tocha-vaso/vaso_start.sh
 Restart=always
 
 [Install]

@@ -3,8 +3,8 @@ Description=vaso-sensores
 
 [Service]
 User=pi
-WorkingDirectory=/home/pi/vaso/
-ExecStart=/bin/bash /home/pi/vaso/vaso_sensores_start.sh
+WorkingDirectory=/home/pi/tocha-vaso/
+ExecStart=/bin/bash /home/pi/tocha-vaso/vaso_sensores_start.sh
 Restart=always
 
 [Install]
