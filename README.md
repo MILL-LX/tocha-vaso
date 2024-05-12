@@ -37,7 +37,7 @@ cd tocha-vaso/
 python3 sensores/blinkatest.py
 ```
 
-install adafruit libraries and OSC library  
+install adafruit and OSC python libraries  
 https://learn.adafruit.com/adafruit-vl53l0x-micro-lidar-distance-sensor-breakout/python-circuitpython  
 https://learn.adafruit.com/adafruit-4-channel-adc-breakouts/python-circuitpython  
 ```
