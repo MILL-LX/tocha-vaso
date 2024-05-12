@@ -22,12 +22,6 @@ sudo apt-get install --upgrade python3-setuptools
 sudo apt-get install python3-pip
 ```
 
-clone repo  
-```
-git clone https://github.com/MILL-LX/tocha-vaso.git
-cd tocha-vaso
-```
-
 install blinka (CircuitPython for Linux)  
 https://learn.adafruit.com/circuitpython-on-raspberrypi-linux/installing-circuitpython-on-raspberry-pi  
 ```
@@ -35,8 +29,10 @@ sudo pip3 install --upgrade adafruit-python-shell
 wget https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/raspi-blinka.py
 sudo python3 raspi-blinka.py
 ```
-after reboot, test blinka  
+
+after reboot, clone repo and test blinka  
 ```
+git clone https://github.com/MILL-LX/tocha-vaso.git
 cd tocha-vaso/
 python3 sensores/blinkatest.py
 ```
