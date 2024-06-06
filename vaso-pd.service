@@ -1,6 +1,7 @@
 [Unit]
 Description=vaso-pd
-Requires=vaso-sensores.service
+Requires=vaso-sensores.service local-fs.target
+After=local-fs.target
 
 [Service]
 User=pi
