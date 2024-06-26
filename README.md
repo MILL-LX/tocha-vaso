@@ -13,6 +13,9 @@ components:
 
 ## Raspberry Configuration
 
+enable i2c  
+`sudo raspi-config` > interfaces > i2c > enable  
+
 install python  
 ```
 sudo apt-get update
